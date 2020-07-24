@@ -1,13 +1,28 @@
 
 <div class="container">
-    <h1 class="display-2 text-center">{{title}}</h1>
+    <h1 class="display-2 text-center">{{title}} {{anio}}</h1>
     <hr>
-    <ul>
-        <li>Direccion: {{direccion}}</li>
-        <li>Curso: {{curso}}</li>
-    </ul>
+    <div class="row">
+        {{#each sedes}}
+        <div class="col-6 col-md-4">
+            <div class="card">
+                <img class="card-img-top" src="{{img}}" alt="{{sede}}">
+                <div class="card-body">
+                    <h4 class="card-title">{{nombre}}</h4>
+                    <div class="card-text">
+                        <ul>
+                            <li>Direccion: {{direccion}}</li>
+                            <li>Curso: {{curso}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
 </div>
 
+
 <div class="container">
-    <a href="/nosotros">Info de Nosotros</a>
+    {{!-- <a href="/nosotros">Info de Nosotros</a> --}}
 </div>

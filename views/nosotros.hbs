@@ -1,6 +1,31 @@
-<div class="container">
-    <h1 class="text-center">{{title}}</h1>
-    <h2 class="text-center">{{subtitulo}}</h2>
-    <p>{{contenido}}</p>
-    <a href="/">volver</a>
+<div class="container mb-5">
+    <h1 class="text-center">{{data.seccion1.title}}</h1>
+    <h2 class="text-center">{{data.seccion1.subtitulo}}</h2>
+    <p>{{data.seccion1.contenido}}</p>
+    {{!-- <a href="/">volver</a> --}}
+</div>
+
+<hr>
+
+<div class="container mt-5">
+    <h2 class="display-4 text-center mb-5">{{data.seccion2.title}}</h2>
+    <div class="row">
+        {{#each data.seccion2.usuarios}}
+            <div class="col-6 ">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-md-4">
+                        <img class="card-img-top" src="images/{{img}}" alt="{{nombre}} {{apellido}}" style='max-heigth:100px'>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 class="card-title">{{nombre}} {{apellido}}</h4>
+                                <p class="card-text">Edad: {{anio - edad}}</p>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
 </div>

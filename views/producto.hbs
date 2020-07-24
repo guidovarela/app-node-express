@@ -1,0 +1,31 @@
+
+<nav class="breadcrumb">
+    <a class="breadcrumb-item" href="/">Home</a>
+    <a class="breadcrumb-item" href="/productos">Productos</a>
+    <span class="breadcrumb-item active">{{producto.nombre}}</span>
+</nav>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col">
+            <img class="img-responsive w-100" src="../images/{{producto.imagen}}" alt="{{producto.nombre}}">      
+        </div>
+        <div class="col">
+            <h4>{{producto.nombre}}</h4>
+            <h5 class="text-right">$ {{producto.precio}}</h5>
+            <small class="text-right">{{producto.stock}} disponibles</small>
+            <hr>
+            <p class="lead">{{producto.descripcion}}</p>
+            <a name="" id="" class="btn btn-primary" href="#" role="button">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i> Comprar
+            </a>
+        </div>
+    </div>
+    <div class="alert alert-info my-5">
+        <p class="lead">
+            {{legales}}
+        </p>
+        <p>{{envios}}</p>
+    </div>
+
+</div>
